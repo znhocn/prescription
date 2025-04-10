@@ -18,24 +18,24 @@
 #set text(top-edge: 5pt)
 #set text(font: "Noto Sans CJK SC")
 #align(center)[#text(size: 15pt)[#title]]
-#align(center)[#text(size: 18pt)[处 方 笺]]
+#align(center)[#text(size: 18pt)[处~~方~~笺]]
 
 #set text(font: "SimSun", size: 10pt)
 #grid(
   columns: 4,
   gutter: 1fr,
-  [姓 名：#underline[#name]],
-  [性 别：#underline[#gender 性]],
-  [年 龄：#underline[#age 岁]],
-  [科 室：#underline[#department 科]],
+  [姓~~名：#underline[#name]],
+  [性~~别：#underline[#gender 性]],
+  [年~~龄：#underline[#age 岁]],
+  [科~~室：#underline[#department 科]],
 )
 
 #grid(
   columns: 3,
   gutter: 1fr,
   [门诊号：#underline[98898765432106]],
-  [费 别：#underline[自 费]],
-  [日 期：#underline[#datetime.today().year()]年#underline[#datetime.today().month()]月#underline[#datetime.today().day()]日],
+  [费~~别：#underline[自 费]],
+  [日~~期：#underline[#datetime.today().year()]年#underline[#datetime.today().month()]月#underline[#datetime.today().day()]日],
 )
 
 临床诊断及证型：#underline[#diagnosis]
