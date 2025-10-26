@@ -1,18 +1,18 @@
 # prescription
 
-这是一个由 Typst 编写的电子处方模板, 用于快速、方便地生成高质量处方。
+这是一个由 Typst 编写的电子处方模板，用于快速、方便地生成高质量处方。
 
 ## Why Typst
 
-鉴于 Word(.doc、.docx) 是二进制格式, 不方便 git 管理；LaTex(TeX Live) 安装包体积大, 语法冗余, 而且中文支持不好, 因此我们选择了 Typst 这个轻量、语法简洁的排版工具。
+鉴于 Word(.doc、.docx) 是二进制格式，不方便 git 管理；LaTex(TeX Live) 安装包体积大，语法冗余，而且中文支持不好，因此我们选择了 Typst 这个轻量、语法简洁的排版工具。
 
 ## Usage
 
-基本设置须更改 `prescription.yaml` 对应的变量, 其中：
+基本设置须更改 `prescription.yaml` 对应的变量，其中：
 
 * `title`: 医院的名称
 * `name`: 患者姓名(汉字间建议用空格隔开)
-* `gender`: 性别, "男"或"女"
+* `gender`: 性别，"男"或"女"
 * `age`: 患者年龄
 * `date`: 药方开设日期
 * `diagnosis`: 诊断内容
@@ -28,7 +28,7 @@
 typst compile prescription.typ --input src=[PATH]
 ```
 
-例如, 这样编译 `example.yaml` 实例：
+例如，这样编译 `example.yaml` 实例：
 ```shell
 typst compile prescription.typ --input src=example.yaml
 ```
@@ -41,12 +41,12 @@ typst compile prescription.typ --input src=example.yaml
 
 ## Requirement
 
-本项目使用了 `Noto Sans CJK SC` 和 `SimSun` 两种字体, 编译时请确保安装了这两种字体。由于 Typst 编译时缺少字体不会报错, 这个问题很容易被忽略。
+本项目使用了 `Noto Sans CJK SC` 和 `SimSun` 两种字体，编译时请确保安装了这两种字体。由于 Typst 编译时缺少字体不会报错，这个问题很容易被忽略。
 为保障格式符合预期，不清楚如何查看自己是否有这两款字体的话，可以在 clone 本项目后可以直接安装这两个字体。
 
 ## 关于打印
 
-A5直接打印即可, A4打印时70%缩放再根据A5的规格裁剪。
+A5直接打印即可，A4打印时70%缩放再根据A5的规格裁剪。
 
 ## TODO List
 
