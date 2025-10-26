@@ -20,6 +20,7 @@
 #let name = prescription.name
 #let gender = prescription.gender
 #let age = prescription.age
+#let date = prescription.date
 #let diagnosis = prescription.diagnosis
 #let department = prescription.department
 #let doctor = prescription.doctor

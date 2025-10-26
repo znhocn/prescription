@@ -4,8 +4,13 @@
 #import "config.typ": *
 #include "config.typ"
 
+//#let clinic_id = 98898765439999
+
+#let t = datetime.today()
+#let clinic_id = str(10000000000000 + calc.rem(calc.rem(t.year() * 10000 + t.month() * 100 + t.day() * 1103515245 + 12345, 2147483647), 90000000000000))
+
 #place(top + left)[
-  #tiaoma.dbar-exp("[01]98898765432106", width: 25%)
+  #tiaoma.dbar-exp("[01]" + str(clinic_id), width: 25%)
 ]
 
 #place(
@@ -33,9 +38,10 @@
 #grid(
   columns: 3,
   gutter: 1fr,
-  [门诊号：#underline[98898765432106]],
+  [门诊号：#underline[#clinic_id]],
   [费~~别：#underline[自 费]],
-  [日~~期：#underline[#datetime.today().year()]年#underline[#datetime.today().month()]月#underline[#datetime.today().day()]日],
+  [日~~期：#underline[#date]],
+//  [日~~期：#underline[#datetime.today().year()]年#underline[#datetime.today().month()]月#underline[#datetime.today().day()]日],
 )
 
 临床诊断及证型：#underline[#diagnosis]
